@@ -1,5 +1,18 @@
-<h2>Sign up</h2>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form"} ) do |f| %>
+  <ul class="header">
+    <li class="nav-item">
+      <%= link_to home_path do %>
+        <i class="fa-solid fa-arrow-left-long back"></i>
+      <%end%>
+    </li>
+    <li class="nav-item">REGISTER</li>
+    <li class="nav-item">     
+      <div class="actions">
+        <%= f.submit "Next", class: "btn-header" %>
+      </div>
+    </li>
+  </ul>
+ 
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="field form__group">
     <%= f.label :name %><br />
@@ -12,7 +25,7 @@
   <div class="field form__group">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <label>(<%= @minimum_password_length %> characters minimum)</label>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password", class:"form__input" %>
   </div>
@@ -20,8 +33,5 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form__input" %>
   </div>
-  <div class="actions">
-    <%= f.submit "Sign up", class: "btn btn--blue" %>
-  </div>
+
 <% end %>
-<%= render "devise/shared/links" %>
