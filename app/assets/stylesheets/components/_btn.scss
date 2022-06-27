@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  padding: var(--space-xss) var(--space-m);
+  padding: var(--space-xs) var(--space-l);
   border-radius: var(--border-radius);
   background-origin: border-box; // Invisible borders with linear gradients
   background-color: transparent;
@@ -18,9 +18,11 @@
     transition: filter 250ms, color 200ms;
   }
 
-  &--primary {
+  &--blue {
+    text-align: center;
     color: var(--color-white);
-    background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-rotate));
+    background-image: linear-gradient(to right, var(--color-main), var(--color-main-rotate));
+    margin-top: var(--space-m);
 
     &:hover,
     &:focus,
@@ -31,9 +33,10 @@
     }
   }
 
-  &--secondary {
+  &--green {
     color: var(--color-white);
-    background-image: linear-gradient(to right, var(--color-secondary), var(--color-secondary-rotate));
+    background-image: linear-gradient(to right, var(--color-second), var(--color-second-rotate));
+    margin-top: var(--space-l);
 
     &:hover,
     &:focus,
@@ -44,30 +47,20 @@
     }
   }
 
-  &--light {
-    color: var(--color-dark);
-    background-color: var(--color-light);
-
+  &--link {
+    padding: 0;    
+    color: var(--text-body);  
     &:hover,
     &:focus,
     &:focus-within,
     &:active {
-      color: var(--color-dark);
+      color: var(--color-main);
       filter: brightness(92%);
     }
-  }
 
-  &--dark {
-    color: var(--color-white);
-    border-color: var(--color-dark);
-    background-color: var(--color-dark);
-
-    &:hover,
-    &:focus,
-    &:focus-within,
-    &:active {
-      color: var(--color-white);
+    &--1 {
+      margin-top: var(--space-l);     
     }
+   
   }
-
 }

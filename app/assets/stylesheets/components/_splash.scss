@@ -1,0 +1,14 @@
+.splash {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__logo {
+    padding-bottom: var(--space-xxxl);
+    font-family: var(--font-logo);
+    font-size: var(--font-size-xxxxl);
+  }
+}
