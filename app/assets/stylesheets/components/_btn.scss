@@ -48,7 +48,8 @@
   }
 
   &--link {
-    padding: 0;    
+    padding: 0;   
+    margin-top: var(--space-l); 
     color: var(--text-body);  
     &:hover,
     &:focus,

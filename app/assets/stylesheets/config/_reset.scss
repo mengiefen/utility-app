@@ -17,9 +17,8 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-height: 100%;
-  padding: 0 var(--space-s);
-
   background-color: var(--color-background);
   color: var(--text-body);
   line-height: var(--line-height-body);

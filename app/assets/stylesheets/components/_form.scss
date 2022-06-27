@@ -3,29 +3,40 @@
   display: flex; 
   flex-direction: column;
   flex-wrap: wrap;
-  gap: var(--space-xs);
+  gap: var(--space-xxxs);
+  line-height: 0;
+
 
   &__group {
     flex: 1;
+    label {
+      display: none;
+      height: 0;
+    }
+  }
+  .first {
+    margin-top: var(--space-m);
   }
 
   &__input {
     display: block;
     width: 100%;
     max-width: 100%;
-    padding: var(--space-xxs) var(--space-xs);
-    border: var(--border);
-    border-radius: var(--border-radius);
+    padding: var(--space-xs) var(--space-xs);
+    border: 2px solid transparent;
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--color-light);
     outline: none;
-    transition: box-shadow 250ms;
+    transition: all 500ms;
+  
 
     &:focus {
-      box-shadow: 0 0 0 2px var(--color-glint);
-      border: 2px solid var(--color-main)
+      border-bottom: 3px solid var(--color-main);  
+    
     }
 
     &--invalid {
-      border-color: var(--color-primary);
-    }
+      border-color: var(--color-main);
+    }   
   }
 }
