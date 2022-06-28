@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  padding: var(--space-xs) var(--space-l);
+  padding: var(--space-m) var(--space-l);
   border-radius: var(--border-radius);
   background-origin: border-box; // Invisible borders with linear gradients
   background-color: transparent;
@@ -19,10 +19,13 @@
   }
 
   &--blue {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--color-white);
     background-image: linear-gradient(to right, var(--color-main), var(--color-main-rotate));
-    margin-top: var(--space-m);
+    margin-top: var(--space-m);  
+    min-width: 70%;
 
     &:hover,
     &:focus,
@@ -36,8 +39,8 @@
   &--green {
     color: var(--color-white);
     background-image: linear-gradient(to right, var(--color-second), var(--color-second-rotate));
-    margin-top: var(--space-l);
-    border: 2px solid var(--color-light);
+     border: 2px solid var(--color-white);
+     margin: var(--space-m);
 
     &:hover,
     &:focus,

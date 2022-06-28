@@ -10,6 +10,7 @@
   list-style: none;
   height: 10vh;
   font-weight: 600;
+  margin: 0;
 
   @include media(tabletAndUp) {
     margin-bottom: var(--space-xl);
@@ -29,4 +30,14 @@
     cursor: pointer;   
     z-index: 1000;
   }
+  
 }
+
+.header-2 {
+  padding: var(--space-s) var(--space-l);
+  width: 100vw;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  margin-top: 0;
+}
+
