@@ -7,8 +7,9 @@
         <div class="col-1">       
           <%= image_tag utility_icon(@utility, 40), class: "icon" %>        
         </div>
-        <div class="col-2">
-          <%= f.file_field :avatar, class: "btn btn--green"%>
+        <div class="col-2">          
+          <%= f.file_field :icon, class: "btn btn--green"%>
+          <%= f.label :icon %><br />
         </div>
       </div>     
     </div>   

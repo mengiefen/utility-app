@@ -2,7 +2,9 @@
   <%= link_to user_utility_path(user_id: current_user.id, id: utility.id) do %>
     <div class="utility">
     
-        <i class="fa-solid fa-plug-circle-plus fa-3x"></i>
+        <%# <i class="fa-solid fa-plug-circle-plus fa-3x"></i> %>
+     
+         <%= image_tag utility_icon(utility, 20), class: "icon" %>   
   
       <div class="utility__detail">
         <p class="utility__name" > <%= utility.name %> </p>
