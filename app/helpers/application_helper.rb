@@ -1,7 +1,7 @@
 module ApplicationHelper
   def user_avatar(user, size = 30)
     if user.avatar.attached?
-      user.avatar.variant(resize: "#{size}x#{size}!")
+      user.avatar.representation(resize_to_limit: [size, size])
     else
       user.avatar.attach_avatar = 'defualt-avatar.png'
     end
@@ -9,7 +9,7 @@ module ApplicationHelper
 
   def utility_icon(utility, size)
     if utility.icon.attached?
-      utility.icon.variant(resize: "#{size}x#{size}!")
+      utility.icon.representation(resize_to_limit: [size, size])
     else
       utility.icon.attach_icon = 'defualt-icon.svg'
     end
