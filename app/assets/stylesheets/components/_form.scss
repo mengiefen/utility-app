@@ -37,7 +37,8 @@
   
 
     &:focus {
-      border-bottom: 3px solid var(--color-main);  
+      border-bottom: 3px solid var(--color-main);
+      background-color: var(--color-light);
     
     }
 
