@@ -2,7 +2,6 @@
   width: 100%;
   display: flex; 
   flex-direction: column;
-  flex-wrap: wrap;
   gap: var(--space-xxxs);
   line-height: 0;
 
@@ -14,6 +13,13 @@
       height: 0;
     }
   }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .first {
     margin-top: var(--space-m);
   }
