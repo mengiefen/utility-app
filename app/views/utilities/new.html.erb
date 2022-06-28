@@ -1,0 +1,25 @@
+  <%= render "shared/header"%>
+ 
+  <%= form_with model: @utility, url: user_utilities_path, class: "form" do |f| %>
+    <%# ?????? %>
+    <div class="field form__group first">
+      <div class="row"> 
+        <div class="col-1">       
+          <%= image_tag utility_icon(@utility, 40), class: "icon" %>        
+        </div>
+        <div class="col-2">
+          <%= f.file_field :avatar, class: "btn btn--green"%>
+        </div>
+      </div>     
+    </div>   
+
+    <div class="field form__group">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form__input" %>
+    </div>
+
+    <div class="actions">
+          <%= f.submit "Add", class: "btn btn--blue" %>
+    </div>
+
+  <% end %>
