@@ -4,3 +4,12 @@ import "./controllers"
 
 import "@fortawesome/fontawesome-free/js/all"
 
+import "trix"
+import "@rails/actiontext"
+import "./navbar"
+
+
+
+
+
+
