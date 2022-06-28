@@ -56,6 +56,6 @@
   --border: solid 2px var(--color-light);
 
   // Shadows
-  --shadow-large:  2px 4px 10px hsl(0 0% 0% / 0.1);
-  --shadow-small:  1px 3px 6px hsl(0 0% 0% / 0.1);
+  --shadow-large:  2px 4px 10px var(--text-muted);
+  --shadow-small:  1px 3px 6px var(--text-muted);
 }

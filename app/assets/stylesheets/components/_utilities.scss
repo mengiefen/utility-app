@@ -1,0 +1,22 @@
+.utilities {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  width: 100%;
+  padding: var(--space-s);
+
+  .utility {
+    background-color: var(--color-white); 
+    padding: var(--space-xxs);
+    display: flex;
+    justify-content: space-between;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-small);
+
+    &__detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}

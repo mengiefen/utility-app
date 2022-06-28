@@ -37,6 +37,7 @@
     color: var(--color-white);
     background-image: linear-gradient(to right, var(--color-second), var(--color-second-rotate));
     margin-top: var(--space-l);
+    border: 2px solid var(--color-light);
 
     &:hover,
     &:focus,
