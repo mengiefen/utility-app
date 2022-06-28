@@ -5,6 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable
 
+  has_many :utilities
+  has_many :payments
+
   has_one_attached :avatar
 
   validates :name, presence: true
