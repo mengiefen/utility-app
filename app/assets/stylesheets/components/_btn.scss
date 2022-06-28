@@ -38,9 +38,10 @@
 
   &--green {
     color: var(--color-white);
-    background-image: linear-gradient(to right, var(--color-second), var(--color-second-rotate));
+    width: 80%;   
      border: 2px solid var(--color-white);
      margin: var(--space-m);
+     text-align: center;
 
     &:hover,
     &:focus,
