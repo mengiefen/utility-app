@@ -3,5 +3,5 @@ class Payment < ApplicationRecord
   has_many :utility_payments
   has_many :utilities, through: :utility_payments
   validates :name, presence: true
-  validates :amount, numericality: true, default: 0
+  validates :amount, numericality: true
 end
