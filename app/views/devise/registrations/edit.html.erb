@@ -16,7 +16,7 @@
 
   <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div class="form-group">
+    <div class="field form__group">
       <div class="row"> 
         <div class="col-sm-4">       
           <%= image_tag user_avatar(resource, 100), class: "avatar" %>        
@@ -30,7 +30,7 @@
 
   <div class="field form__group">
     <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form__input" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form__input", placeholder:"Full name" %>
   </div>
   <div class="field form__group">
     <%= f.label :email %><br />
@@ -40,8 +40,8 @@
     <label>Currently waiting confirmation for: <%= resource.unconfirmed_email %></label>
   <% end %>
   <div class="field form__group">
-    <%= f.label :password %> <label><i>(leave blank if you don't want to change it)</i> <label><br />
-    <%= f.password_field :password, autocomplete: "new-password", class:"form__input" %>
+    <%= f.label :password %> <label>(leave blank if you don't want to change it)</label> <br />
+    <%= f.password_field :password, autocomplete: "new-password", class:"form__input", placeholder:"New Password"%>
     <% if @minimum_password_length %>
       <br />
       <label><%= @minimum_password_length %> characters minimum</label>
@@ -49,10 +49,10 @@
   </div>
   <div class="field form__group">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form__input" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form__input",  placeholder:"Confirm New Password" %>
   </div>
   <div class="field form__group">
     <%= f.label :current_password %><label><i>(we need your current password to confirm your changes)</i> </label><br />
-    <%= f.password_field :current_password, autocomplete: "current-password", class: "form__input" %>
+    <%= f.password_field :current_password, autocomplete: "current-password", class: "form__input",  placeholder:"Current Password" %>
   </div>
 <% end %>
