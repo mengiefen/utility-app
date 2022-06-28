@@ -6,4 +6,12 @@ module ApplicationHelper
       user.avatar.attach_avatar = 'defualt-avatar.png'
     end
   end
+
+  def utility_icon(utility, size)
+    if utility.icon.attached?
+      utility.icon.variant(resize: "#{size}x#{size}!")
+    else
+      utility.icon.attach_icon = 'defualt-icon.svg'
+    end
+  end
 end
