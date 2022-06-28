@@ -3,10 +3,12 @@ Rails.application.routes.draw do
 
   root to: "utilities#index"
 
-  resources :users
+  resources :users do 
+    resources :utilities, only: [:index, :new, :create, :show]
+  end
 
 
   get '/home',to: 'homes#home'
-  get '/utilities', to: 'utilities#index', as: 'categories'
+ 
 
 end
