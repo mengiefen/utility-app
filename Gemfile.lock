@@ -110,6 +110,7 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
+    ffi (1.15.5)
     file_validators (3.0.0)
       activemodel (>= 3.2)
       mime-types (>= 1.0)
@@ -118,6 +119,9 @@ GEM
     gravatar_image_tag (1.2.0)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
+    image_processing (1.12.2)
+      mini_magick (>= 4.9.5, < 5)
+      ruby-vips (>= 2.0.17, < 3)
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
@@ -141,6 +145,7 @@ GEM
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2022.0105)
+    mini_magick (4.11.0)
     mini_mime (1.1.2)
     minitest (5.16.0)
     msgpack (1.5.2)
@@ -221,6 +226,8 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
+    ruby-vips (2.1.4)
+      ffi (~> 1.12)
     rubyzip (2.3.2)
     selenium-webdriver (4.3.0)
       childprocess (>= 0.5, < 5.0)
@@ -277,6 +284,7 @@ DEPENDENCIES
   factory_bot_rails
   file_validators
   gravatar_image_tag
+  image_processing (~> 1.2)
   jbuilder
   jsbundling-rails
   letter_opener
