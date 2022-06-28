@@ -1,6 +1,6 @@
 class UtilitiesController < ApplicationController
   def index
-    @utilities = Utility.includes(:utility_payments).all
+    @utilities = Utility.all
   end
 
   def new
@@ -8,7 +8,8 @@ class UtilitiesController < ApplicationController
   end
 
   def show
-    @utility = Utility.find(params[:id])
+    @utility = Utility.includes(:utility_payments, :payments).find(params[:id])
+    @payments = @utility.payments.all
   end
 
   def create
