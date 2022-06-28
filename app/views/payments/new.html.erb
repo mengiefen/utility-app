@@ -1,0 +1,18 @@
+  <%= render "shared/header", name: "NEW TRANSACTION" %>
+ 
+  <%= form_with model: @payment, url: new_user_payment_path, class: "form" do |f| %>
+    <div class="field form__group first">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form__input" %>
+    </div>
+
+    <div class="field form__group">
+      <%= f.label :amount, class: "form-label" %><br>
+      <%= f.number_field :amount, step: :any, class: "form__input" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Add New Transactions", class: "btn btn--blue center" %>
+    </div>
+
+  <% end %>
