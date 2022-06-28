@@ -3,8 +3,8 @@
     <div class="payment">    
         <i class="fa-solid fa-plug-circle-plus fa-3x"></i>  
       <div class="payment__detail">
-        <p class="payment__name" > <%= payment.name %> </p>
-        <p class="payment__date" > <%= payment.created_at %> </p>
+        <p class="payment__name" ><strong> <%= payment.name %> </strong> </p>
+        <p class="payment__date" > <%= payment.created_at.strftime("%B %d, %Y") %> </p>
       </div>  
       <p>$70 </p>
     </div> 

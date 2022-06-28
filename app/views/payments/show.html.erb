@@ -1,0 +1,6 @@
+<%= @payment.name %>
+<%= current_user.name %>
+<div>
+<% @payment.utilities.each  do |utility|%>
+  <p><%= utility.name %></p>
+<%end%>
