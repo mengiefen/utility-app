@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  padding: var(--space-m) var(--space-l);
+  padding: var(--space-l) var(--space-l);
   border-radius: var(--border-radius);
   background-origin: border-box; // Invisible borders with linear gradients
   background-color: transparent;
@@ -24,8 +24,9 @@
     align-items: center;
     color: var(--color-white);
     background-image: linear-gradient(to right, var(--color-main), var(--color-main-rotate));
-    margin-top: var(--space-m);  
+    margin-top: var(--space-m);
     min-width: 70%;
+    
 
     &:hover,
     &:focus,
