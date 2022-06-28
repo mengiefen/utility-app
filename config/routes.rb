@@ -5,10 +5,8 @@ Rails.application.routes.draw do
 
   resources :users do 
     resources :utilities, only: [:index, :new, :create, :show]
+    resources :payments, only: [:index, :show, :new, :create]
   end
-
-
-  get '/home',to: 'homes#home'
- 
-
+  
+  get '/home',to: 'homes#home' 
 end
