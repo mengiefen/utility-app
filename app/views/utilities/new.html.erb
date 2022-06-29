@@ -2,7 +2,7 @@
 <%= form_with model: @utility, url: user_utilities_path, class: "form" do |f| %>
   <div class="field form__group first file_upload">
     <div class="row">
-      <%= image_tag utility_icon(@utility, 40), class: "icon" %>
+      <%= image_tag utility_icon(@utility, 100), class: "icon" %>
       <div class="btn btn-image">
         <i class="fa-solid fa-upload"></i>  Upload
         <%= f.file_field :icon %>
