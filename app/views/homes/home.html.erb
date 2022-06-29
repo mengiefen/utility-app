@@ -1,5 +1,15 @@
 <section class="splash"> 
-  <h1 class="splash__logo"><strong>Pay</strong>Bill</h2>
-  <%= link_to "Login", new_user_session_path, class:"btn btn--blue"%>
-  <%= link_to "Signup", new_user_registration_path, class:'btn btn--link btn--link--1' %>
+<div class="splash--left">
+  <h1>Welcome to BillPay</h1>
+</div>
+<div class="splash--right">
+  <div class="splash__logo">
+      <div class="logo-icon"> <i class="fa-solid fa-people-roof "></i> </div>
+      <h1 class="text"><strong>Pay</strong>Bill</h2>
+  </div> 
+    
+    <%= link_to "Login", new_user_session_path, class:"btn btn--blue"%>
+    <%= link_to "Signup", new_user_registration_path, class:'btn btn--link btn--link--1' %>
+</div>
+  
 </section>
