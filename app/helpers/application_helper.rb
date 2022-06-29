@@ -3,7 +3,7 @@ module ApplicationHelper
     if user.avatar.attached?
       user.avatar.representation(resize_to_limit: [size, size])
     else
-      user.avatar.attach_avatar = 'defualt-avatar.png'
+      'defualt-avatar.png'
     end
   end
 
