@@ -1,24 +1,13 @@
-
-  <%= render "shared/header", name: "Categories" %>
-  <%= render "shared/navbar" %>
-  <div class="header-2">
-    Hi, <strong>
+<%= render "shared/header", name: "Categories" %>
+<%= render "shared/navbar" %>
+<div class="header-2">
+  Hi, <strong>
     <%= current_user.name %>
-    </strong>
-  </div>
-  <div class="utilities">
-  <%= render partial: 'category' %> 
+  </strong>
 </div>
-
+<div class="utilities">
+  <%= render partial: 'category' %>
+</div>
 <div class="utilities-footer">
   <%= link_to "New Utitlity", new_user_utility_path(user_id: current_user.id), class: "btn btn--green" %>
-<div>
-<%# 
-
-<i class="fa-solid fa-plug-circle-plus fa-4x"></i>
-<i class="fa-solid fa-tty fa-4x"></i>
-<i class="fa-solid fa-faucet-drip fa-4x"></i>
-<i class="fa-solid fa-gas-pump"></i>
-<i class="fa-solid fa-school fa-4x"></i>
-<i class="fa-solid fa-film fa-4x"></i>
-<i class="fa-solid fa-hospital fa-4x"></i> %>
+  <div>
