@@ -3,7 +3,7 @@
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="field form__group first file_upload">
     <div class="row">
-      <%= image_tag user_avatar(resource, 40), class: "icon" %>
+      <%= image_tag user_avatar(resource, 100), class: "icon" %>
       <div class="btn btn-image">
         <i class="fa-solid fa-upload"></i>  Upload
         <%= f.file_field :avatar %>
@@ -37,4 +37,9 @@
     <%= f.label :current_password %><label><i>(we need your current password to confirm your changes)</i> </label><br />
     <%= f.password_field :current_password, autocomplete: "current-password", class: "form__input",  placeholder:"Current Password" %>
   </div>
+
+   <div class="desktop-actions">
+    <%= f.submit "UPDATE PROFILE", class: "btn btn--blue btn--blue" %>
+  </div>
+
 <% end %>
