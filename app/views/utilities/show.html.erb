@@ -1,17 +1,14 @@
-<%= render "shared/header", name: @utility.name %>
-
+<%= render "header", name: @utility.name %>
 <div class="header-2">
   Hi, <strong>
-  <%= current_user.name %>
+    <%= current_user.name %>
   </strong>
 </div>
-
 <section class="utility-detail">
   <div class="payments">
     <%= render partial:"category_item" %>
   </div>
 </section>
-
 <div class="utilities-footer">
   <%= link_to "New Transactions", new_user_payment_path(user_id: current_user.id), class: "btn btn--green" %>
-<div>
+  <div>

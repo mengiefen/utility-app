@@ -1,26 +1,19 @@
-  <%= render "shared/header", name: "NEW CATEGORY"%>
- 
-  <%= form_with model: @utility, url: user_utilities_path, class: "form" do |f| %>
-    <%# ?????? %>
-    <div class="field form__group first">
-      <div class="row"> 
-        <div class="col-1">       
-          <%= image_tag utility_icon(@utility, 40), class: "icon" %>        
-        </div>
-        <div class="col-2">          
-          <%= f.file_field :icon, class: "btn btn--green"%>
-          <%= f.label :icon %><br />
-        </div>
-      </div>     
-    </div>   
-
-    <div class="field form__group">
-      <%= f.label :name %><br />
-      <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form__input" %>
+  <%= render "header", name: "NEW CATEGORY" %>
+<%= form_with model: @utility, url: user_utilities_path, class: "form" do |f| %>
+  <div class="field form__group first file_upload">
+    <div class="row">
+      <%= image_tag utility_icon(@utility, 40), class: "icon" %>
+      <div class="btn btn-image">
+        <i class="fa-solid fa-upload"></i>  Upload
+        <%= f.file_field :icon %>
+      </div>
     </div>
-
-    <div class="actions">
-          <%= f.submit "Add", class: "btn btn--blue" %>
-    </div>
-
-  <% end %>
+  </div>
+  <div class="field form__group first">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form__input", placeholder:"Category name" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn--blue" %>
+  </div>
+<% end %>
