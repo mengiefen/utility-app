@@ -13,13 +13,22 @@
   margin: 0;
 
   @include media(tabletAndUp) {
-    margin-bottom: var(--space-xl);
+    display: none;
+  }
+
+  .nav-item {
+    text-transform: capitalize;
+  }
+
+  @include media(tabletAndUp) {
+  
   }
 
   .back {
     color: var(--color-white);
     font-size: var(--font-size-xl);
   }
+
 
   button {
     border: none;

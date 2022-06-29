@@ -5,10 +5,16 @@
 
 .utilities {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: var(--space-xs);
   width: 100%;
   padding: var(--space-s);
+
+  @include media(tabletAndUp) {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: var(--space-xxxxl);
+    padding: 0 var(--space-xxl);
+  }
 
   .utility {
     background-color: var(--color-white);
@@ -20,9 +26,20 @@
     min-height: 7rem;
     gap: var(--space-s);
 
+    @include media(tabletAndUp) {
+      &:hover {
+        box-shadow: 3px 3px 10px var(--color-second);
+      }
+    } 
+
     .icon {
-      width: 40%;
-      height: 40%;
+      width: 20%;
+      height: 20%;
+
+      @include media(tabletAndUp) {
+        width: 100px;
+        height: 100px;
+      }
     }
 
     &__detail {
@@ -40,16 +57,21 @@
     }
 
     &__badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--color-main);
       background-color: var(--text-muted);
       color: var(--color-white);
       padding: var(--space-ss);
-      min-width: 80%;
+      min-width: 50px;
+      min-height: 50px;
       text-align: center;
       border-radius: 10px;
+      border-radius: 50%;
     }
   }
 }
-
 .utilities-footer {
   position: fixed;
   bottom: 0;
@@ -62,4 +84,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include media(tabletAndUp) { 
+    min-width: 20%;
+    width: auto;
+    padding: 0;
+    min-height: auto;
+    bottom: var(--space-xl);
+    left: 80%;
+    
+  }
+
 }

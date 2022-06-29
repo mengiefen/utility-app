@@ -26,6 +26,8 @@
     background-image: linear-gradient(to right, var(--color-main), var(--color-main-rotate));
     margin-top: var(--space-m);
     min-width: 70%;
+    padding: var(--space-l) var(--space-xxxl);
+
 
     &:hover,
     &:focus,
@@ -34,7 +36,13 @@
       color: var(--color-white);
       filter: saturate(1.4) brightness(115%);
     }
-  }
+   
+
+    @include media(tabletAndUp) {
+      min-width: 40%;
+    }
+  } 
+
 
   &--green {
     color: var(--color-white);
