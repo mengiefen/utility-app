@@ -1,12 +1,12 @@
 <%@payments.each do |payment|%>
-  <%= link_to user_payment_path(user_id: current_user.id, id: payment.id) do %>
-    <div class="payment">    
-        <i class="fa-solid fa-plug-circle-plus fa-3x"></i>  
+  <%= link_to user_payment_path(user_id: current_user.id,utility_id: @utility.id, id: payment.id) do %>
+    <div class="payment">
+      <%= image_tag utility_icon(@utility, 40), class: "icon" %>
       <div class="payment__detail">
         <p class="payment__name" ><strong> <%= payment.name %> </strong> </p>
         <p class="payment__date" > <%= payment.created_at.strftime("%B %d, %Y") %> </p>
-      </div>  
-      <p>$70 </p>
-    </div> 
+      </div>
+      <p> $ <%= payment.amount %> </p>
+    </div>
   <%end%>
 <%end%>
