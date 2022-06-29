@@ -1,18 +1,19 @@
-  <%= render "shared/header", name: "NEW TRANSACTION" %>
- 
-  <%= form_with model: @payment, url: new_user_payment_path, class: "form" do |f| %>
-    <div class="field form__group first">
-      <%= f.label :name %><br />
-      <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form__input", placeholder: "Transaction name" %>
-    </div>
-
-    <div class="field form__group">
-      <%= f.label :amount, class: "form-label" %><br>
-      <%= f.number_field :amount, step: :any, class: "form__input", placeholder: "Transaction amount"%>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "Add New Transactions", class: "btn btn--blue center" %>
-    </div>
-
-  <% end %>
+<%= render "header", name: "NEW TRANSACTION" %>
+<%= form_with model: @payment, url: user_payments_path, class: "form" do |f| %>
+  <div class="field form__group first">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form__input", placeholder: "Transaction name" %>
+  </div>
+  <div class="field form__group">
+    <%= f.label :amount, class: "form-label" %><br>
+    <%= f.number_field :amount, step: :any, class: "form__input", placeholder: "Transaction amount"%>
+  </div>
+  <h2>Category Type: </h2>
+  <div class="field form__group">
+    <%= f.label :utility_id, class: "form-label" %><br>
+    <%= f.collection_select :utility_id, Utility.all.order(:name), :id, :name, class:'select__input' %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Add Transaction", class: "btn btn--blue center" %>
+  </div>
+<% end %>
