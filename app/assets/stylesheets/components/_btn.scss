@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  padding: var(--space-l) var(--space-l);
+  padding: var(--space-m) var(--space-l);
   border-radius: var(--border-radius);
   background-origin: border-box; // Invisible borders with linear gradients
   background-color: transparent;
@@ -26,7 +26,6 @@
     background-image: linear-gradient(to right, var(--color-main), var(--color-main-rotate));
     margin-top: var(--space-m);
     min-width: 70%;
-    
 
     &:hover,
     &:focus,
@@ -39,10 +38,9 @@
 
   &--green {
     color: var(--color-white);
-    width: 80%;   
-     border: 2px solid var(--color-white);
-     margin: var(--space-m);
-     text-align: center;
+    width: 80%;
+    border: 2px solid var(--color-white); 
+    text-align: center;
 
     &:hover,
     &:focus,
@@ -54,9 +52,10 @@
   }
 
   &--link {
-    padding: 0;   
-    margin-top: var(--space-l); 
-    color: var(--text-body);  
+    padding: 0;
+    margin-top: var(--space-l);
+    color: var(--text-body);
+
     &:hover,
     &:focus,
     &:focus-within,
@@ -66,8 +65,7 @@
     }
 
     &--1 {
-      margin-top: var(--space-l);     
+      margin-top: var(--space-l);
     }
-   
   }
 }

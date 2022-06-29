@@ -1,0 +1,64 @@
+.payment-detail {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: var(--space-m) var(--space-l) ;
+
+  .utility-type {
+    display: flex;
+    gap: var(--space-m);
+    align-items: center;
+    margin-bottom: var(--space-m);
+    box-shadow:var(--shadow-small);
+    border: 2px solid var(--text-muted);
+    padding: var(--space-s);
+
+    img {
+      width: 80px;
+      height: 80px;
+      padding: var(--space-xxs);
+      border-radius: 50%;
+      border: 3px solid var(--color-main)
+    }
+
+    p {
+      font-size: var(--font-size-xl);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  .detail {
+    display: flex;
+    flex-direction:column;
+    font-size:var(--font-size-l);
+    gap: var(--space-xs);
+
+
+    span{
+      display: block;
+      flex: 1;
+    }
+
+    p {
+        font-weight: 700;
+        color: var(--color-main);
+        flex:2;
+    }
+
+    .type {
+      display: flex;
+
+    }
+
+    .amount {
+      display: flex;
+
+    }
+
+    .date {
+        text-transform: capitalize;
+
+    }
+  }
+}

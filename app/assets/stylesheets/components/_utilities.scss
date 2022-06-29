@@ -6,29 +6,48 @@
 .utilities {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-s);
+  gap: var(--space-xs);
   width: 100%;
-  padding: var(--space-m);
- 
- 
+  padding: var(--space-s);
 
   .utility {
-    background-color: var(--color-white); 
+    background-color: var(--color-white);
     padding: var(--space-xxs);
     display: flex;
     justify-content: space-between;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-small);
     min-height: 7rem;
+    gap: var(--space-s);
+
+    .icon {
+      width: 40%;
+      height: 40%;
+    }
 
     &__detail {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
       flex: 3;
-      text-align: right;
-    }   
-  }  
+      align-items: center;
+      font-size: var(--font-size-l);
+      font-weight: 600;
+    }
+
+    &__name {
+      text-transform: uppercase;
+    }
+
+    &__badge {
+      background-color: var(--text-muted);
+      color: var(--color-white);
+      padding: var(--space-ss);
+      min-width: 80%;
+      text-align: center;
+      border-radius: 10px;
+    }
+  }
 }
 
 .utilities-footer {
