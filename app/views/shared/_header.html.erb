@@ -11,4 +11,7 @@
       <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn-header" %>
     </li>
   </ul>
+
+    <%= javascript_include_tag "navbar", defer: true, cache: true %>
+
   
