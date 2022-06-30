@@ -5,19 +5,18 @@
 @import "config/variables";
 @import "config/reset";
 
+// Layouts
+@import "layouts/container";
+@import "layouts/header";
+
 // Components
 @import "components/btn";
 @import "components/form";
 @import "components/splash";
+@import "components/payment";
+@import "components/file_upload";
 @import "components/utilities";
 @import "components/flash";
-@import "components/payment";
-@import "components/navbar";
 @import "components/desktop_nav";
-@import "components/file_upload";
+@import "components/navbar";
 @import "components/payment_detail";
-
-// Layouts
-@import "layouts/container";
-@import "layouts/header";
-@import 'actiontext.css';

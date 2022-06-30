@@ -75,9 +75,8 @@
       text-decoration: none;
       color: var(--color-white);
       font-weight: 600;
-      transition: color 0.5s;
       text-transform: uppercase;
-      transition: color 0.5ss;
+      transition: color 0.5s;
 
       &:hover {
         color: var(--color-muted);

@@ -7,7 +7,6 @@
     height: 80px;
     border-radius: 50%;
     border: 2px solid var(--color-main);
-    // padding: var(--space-xs);
   }
 
   .btn-image {
@@ -40,7 +39,6 @@
     min-height: 100%;
     font-size: 100px;
     text-align: right;
-    filter: alpha(opacity=0);
     opacity: 0;
     outline: none;
     background: white;

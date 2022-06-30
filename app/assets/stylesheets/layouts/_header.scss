@@ -20,10 +20,6 @@
     text-transform: capitalize;
   }
 
-  @include media(tabletAndUp) {
-
-  }
-
   .back {
     color: var(--color-white);
     font-size: var(--font-size-xl);
