@@ -120,5 +120,9 @@
     align-self: start;
     color: var(--text-muted);
     font-size: var(--font-size-m);
+
+    @include media(tabletAndUp) {
+      align-self: center;
+    }
   }
 }
