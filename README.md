@@ -1,5 +1,6 @@
 
-![](https://img.shields.io/badge/Microverse-blueviolet) ![](https://img.shields.io/badge/MENGSTU-FENTAW-success) 
+![](https://img.shields.io/badge/Microverse-blueviolet) ![](https://img.shields.io/badge/MENGSTU-FENTAW-success)
+
 
 # Utility App - Ruby on Rails
 
@@ -7,7 +8,15 @@ The Utility app a general purpose rails app which enables user monthly payments.
 
 The app is done using Ruby on Rails and styled with SASS preprocessor. The app has both mobile and desktop version.
 
-![image](https://user-images.githubusercontent.com/39188456/175024290-885646c8-9734-44ff-815f-5666b14f32ab.png)
+## App Screenshot
+<div style="background-color:white; padding: 20px; display: flex; align-items: flex-end; justify-content: center; width: 100%; border-radius: 20px;">
+<img src="desktop.gif" style="flex:3; width: 70vw;height: auto;" alt="mobile  screenshot" />
+
+<img src="mobile.gif" style="flex:1; width: 25vw; height: auto;" alt="mobile screenshot" />alt="mobile screenshot" />
+</div>
+
+## ERD Diagram 
+![image](erd_diagram.png)
 
 
 ## Built with
@@ -19,7 +28,8 @@ The app is done using Ruby on Rails and styled with SASS preprocessor. The app h
     - Ruby installed on local system
     - yarn (Package Manager)
     - npm ( Node Package Manager )
-    - Git and Github Account  
+    - Git and Github Account
+    - PostgreSQL installed on local system
 
 ## Getting Started
 
@@ -31,18 +41,16 @@ To get a local copy up and running follow these simple example steps.
     - run `git clone git@github.com:yersel500/recipe-app.git`
     - cd utility-app/ 
     - git switch dev
-    - run `npm install` or `yarn`
-    - run `bundle install`
-    - run `rails db:create`
-    - run `rails db:migrate`
+    - run `bin/setup`
+    - run `bin/dev`   
     
 ## Running the Application Locally
 >**Steps to excute the app locally*
-  - Run `rails s` in the console at working directory
+  - Run `bin/dev` in the console at working directory
 
-## Running the Application Live
->**Steps to excute the app on browser*
-  [Live Demo](https://glacial-stream-24558.herokuapp.com/)
+
+>**Deployment on Heroku**
+  > # [Live Demo](https://sheltered-reef-51558.herokuapp.com/)
 
 ## Authors
 
