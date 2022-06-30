@@ -11,7 +11,7 @@ module ApplicationHelper
     if utility.icon.attached?
       utility.icon.representation(resize_to_limit: [size, size])
     else
-      utility.icon.attach_icon = 'defualt-icon.svg'
+      utility.icon.attach_icon = 'default_icon.png'
     end
   end
 end
