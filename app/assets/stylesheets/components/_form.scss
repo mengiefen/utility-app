@@ -114,4 +114,15 @@
       width: inherit;
     }
   }
+
+  select {
+    margin-top: var(--space-l);
+  }
+
+  h2 {
+    margin-top: var(--space-l);
+    align-self: start;
+    color: var(--text-muted);
+    font-size: var(--font-size-m);
+  }
 }
