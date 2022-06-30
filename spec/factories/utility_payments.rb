@@ -1,8 +1,6 @@
 FactoryBot.define do
   factory :utility_payment do
-    name { "MyString" }
-    amount { "MyString" }
-    utility { nil }
-    payment { nil }
+    utility { create(:random_utility) }
+    payment { create(:random_payment) }
   end
 end
