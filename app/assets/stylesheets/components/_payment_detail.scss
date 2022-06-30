@@ -14,16 +14,14 @@
     margin: var(--space-l) 0;
     height: 3px;
     background-image: linear-gradient(to right, var(--color-main), var(--color-main-rotate));
-
   }
-
 
   .utility-type {
     display: flex;
     gap: var(--space-m);
     align-items: center;
     margin-bottom: var(--space-m);
-    box-shadow:var(--shadow-small);
+    box-shadow: var(--shadow-small);
     border: 2px solid var(--text-muted);
     padding: var(--space-s);
 
@@ -32,7 +30,7 @@
       height: 80px;
       padding: var(--space-xxs);
       border-radius: 50%;
-      border: 3px solid var(--color-main)
+      border: 3px solid var(--color-main);
     }
 
     p {
@@ -42,38 +40,33 @@
     }
   }
 
- 
-
   .detail {
     display: flex;
-    flex-direction:column;
-    font-size:var(--font-size-l);
+    flex-direction: column;
+    font-size: var(--font-size-l);
     gap: var(--space-xs);
 
-
-    span{
+    span {
       display: block;
       flex: 1;
     }
 
     p {
-        font-weight: 700;
-        color: var(--color-main);
-        flex:2;
+      font-weight: 700;
+      color: var(--color-main);
+      flex: 2;
     }
 
     .type {
       display: flex;
-
     }
 
     .amount {
       display: flex;
-
     }
 
     .date {
-        text-transform: capitalize;
+      text-transform: capitalize;
     }
   }
 }

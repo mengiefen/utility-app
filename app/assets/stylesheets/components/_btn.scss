@@ -28,7 +28,6 @@
     min-width: 70%;
     padding: var(--space-l) var(--space-xxxl);
 
-
     &:hover,
     &:focus,
     &:focus-within,
@@ -36,18 +35,16 @@
       color: var(--color-white);
       filter: saturate(1.4) brightness(115%);
     }
-   
 
     @include media(tabletAndUp) {
       min-width: 40%;
     }
-  } 
-
+  }
 
   &--green {
     color: var(--color-white);
     width: 80%;
-    border: 2px solid var(--color-white); 
+    border: 2px solid var(--color-white);
     text-align: center;
 
     &:hover,

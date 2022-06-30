@@ -30,7 +30,7 @@
       &:hover {
         box-shadow: 3px 3px 10px var(--color-second);
       }
-    } 
+    }
 
     .icon {
       width: 20%;
@@ -72,6 +72,7 @@
     }
   }
 }
+
 .utilities-footer {
   position: fixed;
   bottom: 0;
@@ -85,14 +86,12 @@
   align-items: center;
   justify-content: center;
 
-  @include media(tabletAndUp) { 
+  @include media(tabletAndUp) {
     min-width: 20%;
     width: auto;
     padding: 0;
     min-height: auto;
     bottom: var(--space-xl);
     left: 80%;
-    
   }
-
 }

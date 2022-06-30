@@ -1,6 +1,6 @@
 .payments {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: var(--space-s);
   width: 100%;
   padding: var(--space-m);
@@ -32,13 +32,13 @@
     }
   }
 
-   .icon {
-      width: 20%;
-      height: 20%;
+  .icon {
+    width: 20%;
+    height: 20%;
 
-      @include media(tabletAndUp) {
-        width: 100px;
-        height: 100px;   
-      }
+    @include media(tabletAndUp) {
+      width: 100px;
+      height: 100px;
     }
+  }
 }
