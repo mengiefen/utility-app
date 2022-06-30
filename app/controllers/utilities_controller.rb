@@ -1,6 +1,6 @@
 class UtilitiesController < ApplicationController
   def index
-    @utilities = Utility.all
+    @utilities = Utility.includes(icon_attachment: :blob).all
   end
 
   def new
@@ -8,7 +8,7 @@ class UtilitiesController < ApplicationController
   end
 
   def show
-    @utility = Utility.includes(:utility_payments, :payments).find(params[:id])
+    @utility = Utility.find(params[:id])
     @payments = @utility.payments.all
   end
 
