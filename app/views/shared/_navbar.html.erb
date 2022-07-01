@@ -1,0 +1,23 @@
+<nav class="navbar" >
+  <button class="btn-close" >
+    <i class="fa-solid fa-xmark fa-2x"></i>
+  </button>
+  <div class="nav-header">
+    <%= image_tag user_avatar(current_user, 100), class:"user-avatar" %>
+    <span><%= current_user.name %> </span>
+  </>
+  <hr  />
+</div>
+<ul class="nav-items">
+  <li class="nav-item">
+    <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Categories", user_utilities_path(user_id: current_user.id), class:"nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Sign Out", destroy_user_session_path, class: "nav-link" %>
+  </li>
+</ul>
+</nav>
+<%= javascript_include_tag "navbar", defer: true, cache: true %>

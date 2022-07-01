@@ -1,0 +1,17 @@
+ 
+  <ul class="header">
+    <li class="nav-item">       
+      <button class="btn-open"> 
+         <i class="fa-solid fa-bars fa-4x back"></i>
+      </button>
+     
+    </li>
+    <li class="nav-item"><%= name %></li>
+    <li class="nav-item">    
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn-header" %>
+    </li>
+  </ul>
+
+    <%= javascript_include_tag "navbar", defer: true, cache: true %>
+
+  

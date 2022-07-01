@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  gap: var(--space-s);
+  padding: var(--space-l);
+  background-color: var(--color-main);
+  color: var(--color-white);
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  list-style: none;
+  height: 10vh;
+  font-weight: 600;
+  margin: 0;
+
+  @include media(tabletAndUp) {
+    display: none;
+  }
+
+  .nav-item {
+    text-transform: capitalize;
+  }
+
+  .back {
+    color: var(--color-white);
+    font-size: var(--font-size-xl);
+  }
+
+  button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+
+  .btn-header {
+    color: var(--color-white);
+    background-color: var(--color-main);
+    padding: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+}
+
+.header-2 {
+  padding: var(--space-s) var(--space-l);
+  width: 100vw;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  margin-top: 0;
+}

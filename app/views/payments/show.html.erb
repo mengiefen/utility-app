@@ -1,0 +1,25 @@
+<%= render "header", name: @payment.name %>
+<div>
+  <section class="payment-detail">
+    <div class="payment-detail--header">
+      <div class="utility-type" >
+        <%= image_tag utility_icon(@utility, 40), class: "icon" %>
+        <p> <%= @utility.name %> PAYMENT</p>
+      </div>
+      <hr />
+      <div class="detail">
+        <div class="type">
+          <p>Payment Type: </p>
+          <span><%=  @payment.name %></span>
+        </div>
+        <div class="amount">
+          <p>Payment Amount: </p>
+          <span><%=  @payment.amount %></span>
+        </div>
+        <div class="date">
+          <p>Date: </p>
+          <span><%=  @payment.created_at.strftime("Transaction made on %B %d, %Y at %I:%M%p")  %></span>
+        </div>
+      </div>
+    </div>
+  </section>

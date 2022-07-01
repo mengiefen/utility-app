@@ -1,0 +1,2 @@
+class UtilityPaymentsController < ApplicationController
+end

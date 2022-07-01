@@ -1,0 +1,69 @@
+.splash {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &--left {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: var(--font-size-xxxxl);
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--color-light);
+    }
+
+    @include media(tabletAndUp) {
+      border-radius: 0 0 40% 0;
+      display: flex;
+      width: 50%;
+      height: 100%;
+      background-image: linear-gradient(to bottom, var(--color-main), var(--color-main-rotate), var(--color-second));
+      font-family: var(--font-logo);
+    }
+  }
+
+  &--right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media(tabletAndUp) {
+      width: 50%;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-xxxl);
+    font-family: var(--font-logo);
+    border-radius: var(--border-radius) 30%;
+    font-size: var(--font-size-xxxxl);
+    color: var(--color-white);
+    background-color: var(--color-main);
+
+    .logo-icon {
+      background-color: var(--color-second);
+      height: 100%;
+      width: 40%;
+      padding: 0 var(--space-xs);
+      border-radius: var(--border-radius) 30%;
+    }
+
+    .text {
+      padding: 0 var(--space-xs);
+      width: 60%;
+    }
+
+    @include media(tabletAndUp) {
+      font-size: 3rem;
+      padding: 0;
+    }
+  }
+}

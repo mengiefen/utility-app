@@ -1,0 +1,45 @@
+<%= render "utilities/header", name: "EDIT USER DETAIL" %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put,  class: "form" }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="field form__group first file_upload">
+    <div class="row">
+      <%= image_tag user_avatar(resource, 100), class: "icon" %>
+      <div class="btn btn-image">
+        <i class="fa-solid fa-upload"></i>  Upload
+        <%= f.file_field :avatar %>
+      </div>
+    </div>
+  </div>
+  <div class="field form__group">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form__input", placeholder:"Full name" %>
+  </div>
+  <div class="field form__group">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form__input"%>
+  </div>
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <label>Currently waiting confirmation for: <%= resource.unconfirmed_email %></label>
+  <% end %>
+  <div class="field form__group">
+    <%= f.label :password %> <label>(leave blank if you don't want to change it)</label> <br />
+    <%= f.password_field :password, autocomplete: "new-password", class:"form__input", placeholder:"New Password"%>
+    <% if @minimum_password_length %>
+      <br />
+      <label><%= @minimum_password_length %> characters minimum</label>
+    <% end %>
+  </div>
+  <div class="field form__group">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form__input",  placeholder:"Confirm New Password" %>
+  </div>
+  <div class="field form__group">
+    <%= f.label :current_password %><label><i>(we need your current password to confirm your changes)</i> </label><br />
+    <%= f.password_field :current_password, autocomplete: "current-password", class: "form__input",  placeholder:"Current Password" %>
+  </div>
+
+   <div class="desktop-actions">
+    <%= f.submit "UPDATE PROFILE", class: "btn btn--blue btn--blue" %>
+  </div>
+
+<% end %>

@@ -1,0 +1,76 @@
+.btn {
+  display: inline-block;
+  padding: var(--space-m) var(--space-l);
+  border-radius: var(--border-radius);
+  background-origin: border-box; // Invisible borders with linear gradients
+  background-color: transparent;
+  border: solid 2px transparent;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  transition: filter 400ms, color 200ms;
+
+  &:hover,
+  &:focus,
+  &:focus-within,
+  &:active {
+    transition: filter 250ms, color 200ms;
+  }
+
+  &--blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    background-image: linear-gradient(to right, var(--color-main), var(--color-main-rotate));
+    margin-top: var(--space-m);
+    min-width: 70%;
+    padding: var(--space-l) var(--space-xxxl);
+
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:active {
+      color: var(--color-white);
+      filter: saturate(1.4) brightness(115%);
+    }
+
+    @include media(tabletAndUp) {
+      min-width: 40%;
+    }
+  }
+
+  &--green {
+    color: var(--color-white);
+    width: 80%;
+    border: 2px solid var(--color-white);
+    text-align: center;
+
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:active {
+      color: var(--color-white);
+      filter: saturate(1.2) brightness(110%);
+    }
+  }
+
+  &--link {
+    padding: 0;
+    margin-top: var(--space-l);
+    color: var(--text-body);
+
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:active {
+      color: var(--color-main);
+      filter: brightness(92%);
+    }
+
+    &--1 {
+      margin-top: var(--space-l);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<%= render "header", name: "NEW TRANSACTION" %>
+<%= form_with model: @payment, url: user_payments_path, class: "form" do |f| %>
+  <div class="field form__group first">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form__input", placeholder: "Transaction name" %>
+  </div>
+  <div class="field form__group">
+    <%= f.label :amount, class: "form-label" %><br>
+    <%= f.number_field :amount, step: :any, class: "form__input", placeholder: "Transaction amount"%>
+  </div>
+  <h2>Category Type: </h2>
+  
+   <div class="field checkbox-group">
+      <%= f.collection_check_boxes(:utility_ids, Utility.all, :id, :name,{multiple: true} , class: "form__checkbox") do |b| %>
+          <%= b.label class:"label-checkbox" do%>
+          <%= b.check_box + b.text%>
+          <%end %>
+      <% end %>
+    </div>   
+
+  <div class="actions">
+    <%= f.submit "Add Transaction", class: "btn btn--blue center" %>
+  </div>
+<% end %>

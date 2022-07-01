@@ -1,0 +1,19 @@
+<%= render "header", name: "NEW CATEGORY" %>
+<%= form_with model: @utility, url: user_utilities_path, class: "form" do |f| %>
+  <div class="field form__group first file_upload">
+    <div class="row">
+      <%= image_tag utility_icon(@utility, 100), class: "icon" %>
+      <div class="btn btn-image">
+        <i class="fa-solid fa-upload"></i>  Upload
+        <%= f.file_field :icon %>
+      </div>
+    </div>
+  </div>
+  <div class="field form__group first">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form__input", placeholder:"Category name" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn--blue" %>
+  </div>
+<% end %>

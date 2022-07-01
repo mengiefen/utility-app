@@ -1,0 +1,44 @@
+.payments {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  width: 100%;
+  padding: var(--space-m);
+
+  @include media(tabletAndUp) {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: var(--space-xxxxl);
+    padding: 0 var(--space-xxl);
+  }
+
+  .payment {
+    background-color: var(--color-white);
+    padding: var(--space-xxs);
+    display: flex;
+    justify-content: space-between;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-small);
+
+    &__name {
+      text-transform: capitalize;
+    }
+
+    &__detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .icon {
+    width: 20%;
+    height: 20%;
+
+    @include media(tabletAndUp) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
