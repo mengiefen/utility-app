@@ -115,6 +115,22 @@
     margin-top: var(--space-l);
   }
 
+  .checkbox-group {
+    margin-top: var(--space-l);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--space-xl);
+    row-gap: var(--space-l);
+    
+
+    label {
+      font-size: var(--font-size-m);
+      display: flex;
+      align-items: center;
+      gap: var(--space-m)
+    }
+  }
+
   h2 {
     margin-top: var(--space-l);
     align-self: start;
