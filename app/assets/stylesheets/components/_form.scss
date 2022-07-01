@@ -26,15 +26,7 @@
       justify-self: start;
       width: 50%;
     }
-  }
-
-  .desktop-actions {
-    display: none;
-
-    @include media(tabletAndUp) {
-      display: block;
-    }
-  }
+  }  
 
   .actions {
     display: flex;
