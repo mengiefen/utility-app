@@ -1,6 +1,7 @@
 class UtilitiesController < ApplicationController
   def index
-    @utilities = Utility.includes(icon_attachment: :blob).all
+    @user = current_user
+    @utilities = @user.utilities.includes(icon_attachment: :blob).all
   end
 
   def new
