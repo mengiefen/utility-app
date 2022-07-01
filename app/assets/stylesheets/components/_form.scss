@@ -9,6 +9,7 @@
   padding: 0 var(--space-m);
 
   @include media(tabletAndUp) {
+    width: 50%;
     gap: var(--space-s);
     margin-top: var(--space-xxxxl);
   }
@@ -24,7 +25,6 @@
 
     @include media(tabletAndUp) {
       justify-self: start;
-      width: 50%;
     }
   }
 
@@ -114,7 +114,6 @@
     grid-template-columns: 1fr 1fr;
     column-gap: var(--space-xl);
     row-gap: var(--space-l);
-
 
     label {
       font-size: var(--font-size-m);
