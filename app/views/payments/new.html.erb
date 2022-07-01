@@ -9,10 +9,15 @@
     <%= f.number_field :amount, step: :any, class: "form__input", placeholder: "Transaction amount"%>
   </div>
   <h2>Category Type: </h2>
-  <div class="field form__group">
-    <%= f.label :utility_id, class: "form-label" %><br>
-    <%= f.collection_select :utility_id, Utility.all.order(:name), :id, :name, class:'select__input' %>
-  </div>
+  
+   <div class="field checkbox-group">
+      <%= f.collection_check_boxes(:utility_ids, Utility.all, :id, :name,{multiple: true} , class: "form__checkbox") do |b| %>
+          <%= b.label class:"label-checkbox" do%>
+          <%= b.check_box + b.text%>
+          <%end %>
+      <% end %>
+    </div>   
+
   <div class="actions">
     <%= f.submit "Add Transaction", class: "btn btn--blue center" %>
   </div>
