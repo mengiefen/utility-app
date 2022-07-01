@@ -10,19 +10,16 @@ class PaymentsController < ApplicationController
   end
 
   def create
-    @payment = current_user.payments.new(name: payment_params[:name], amount: payment_params[:amount])
-
+    @payment = current_user.payments.new(payment_params)
     if @payment.save
-      @payment.utility_payments.create!(utility_id: payment_params[:utility_id])
-      redirect_to user_utility_path(user_id: params[:user_id], id: payment_params[:utility_id]),
+      redirect_to root_path,
                   notice: 'Payment was successfully created'
-
     else
       render :new, alert: 'Payment could not be created'
     end
   end
 
   def payment_params
-    params.require(:payment).permit(:name, :amount, :utility_id)
+    params.require(:payment).permit(:name, :amount, utility_ids: [])
   end
 end
