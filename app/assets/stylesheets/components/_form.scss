@@ -26,7 +26,7 @@
       justify-self: start;
       width: 50%;
     }
-  }  
+  }
 
   .actions {
     display: flex;
@@ -108,18 +108,19 @@
   }
 
   .checkbox-group {
+    align-self: start;
     margin-top: var(--space-l);
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: var(--space-xl);
     row-gap: var(--space-l);
-    
+
 
     label {
       font-size: var(--font-size-m);
       display: flex;
       align-items: center;
-      gap: var(--space-m)
+      gap: var(--space-m);
     }
   }
 

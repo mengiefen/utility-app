@@ -5,7 +5,7 @@ import "./controllers"
 import "@fortawesome/fontawesome-free/js/all"
 
 import "trix"
-
+//= require activestorage
 // import "./navbar"
 
 
