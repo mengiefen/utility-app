@@ -3,8 +3,7 @@
     <i class="fa-solid fa-xmark fa-2x"></i>
   </button>
   <div class="nav-header">
-  <%= cl_image_tag(current_user.avatar.key, width: 100, crop: :scale) %>
-    <%# <%= image_tag user_avatar(current_user, 100), class:"user-avatar" %> %>
+    <%= image_tag user_avatar(current_user, 100), class:"user-avatar" %>
     <span><%= current_user.name %> </span>
   </>
   <hr  />
@@ -21,6 +20,4 @@
   </li>
 </ul>
 </nav>
-
 <%= javascript_include_tag "navbar", defer: true, cache: true %>
-

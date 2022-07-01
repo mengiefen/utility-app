@@ -3,8 +3,7 @@
   <section class="payment-detail">
     <div class="payment-detail--header">
       <div class="utility-type" >
-       <%= cl_image_tag(@utility.icon.key, width: 40, crop: :scale) %>
-        <%# <%= image_tag utility_icon(@utility, 40), class: "icon" %> 
+        <%= image_tag utility_icon(@utility, 40), class: "icon" %>
         <p> <%= @utility.name %> PAYMENT</p>
       </div>
       <hr />
