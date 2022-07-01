@@ -4,22 +4,43 @@
   @include media(tabletAndUp) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: var(--space-xxxl);
     padding: var(--space-xs) var(--space-xl);
     background-color: var(--color-main);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
+  }
+
+  .splash-logo {
+    width: auto
   }
 
   .nav-items {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: var(--space-s);
     list-style: none;
+    min-width: 80%;
+  }
+
+  .list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .col-left,
+  .col-right {
+    display: flex;
+    gap: var(--space-s);
+    align-items: center;
+
+  }
+
+  .col-right {
+    float: right;
   }
 
   .list {
@@ -31,7 +52,7 @@
 
   .nav-item {
     font-size: var(--font-size-l);
-    font-weight: 600;
+    font-weight: 500;
     border-bottom: 4px solid transparent;
   }
 
@@ -55,6 +76,20 @@
       height: 40px;
       border: 1px solid var(--color-second);
       border-radius: 50%;
+    }
+  }
+
+  .nav-signout {
+    border: 1px solid rgb(111,1,1);
+    padding: 3px;
+    border-radius: 4px;
+
+    .nav-link {
+      border-bottom:none;
+
+      &:hover {
+        color: rgb(111,1,1);
+      }
     }
   }
 

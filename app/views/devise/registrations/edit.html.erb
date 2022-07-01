@@ -3,7 +3,7 @@
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="field form__group first file_upload">
     <div class="row">
-      <%= image_tag user_avatar(resource, 100), class: "icon" %>
+      <%= image_tag user_avatar(resource, 200), class: "icon" %>
       <div class="btn btn-image">
         <i class="fa-solid fa-upload"></i>  Upload
         <%= f.file_field :avatar %>

@@ -53,7 +53,9 @@ RSpec.describe 'PaymentPage', type: :feature do
       click_link 'New Transactions'
       fill_in 'Name', with: 'Water'
       fill_in 'Amount', with: 10
-      find('#payment_utility_id').find(:xpath, 'option[1]').select_option
+
+      find(:css, "#payment_utility_ids_#{@utility.id}").set(true)
+     
     end
 
     it 'should take us back to category page' do

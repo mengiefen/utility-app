@@ -6,23 +6,25 @@
     </div>
     <ul class="nav-items">
       <div class="list">
-        <li class="nav-item">
-          <%= link_to  user_utilities_path(user_id: current_user.id), class: "nav-link" do %>
-          <% end %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Home", user_utilities_path(user_id: current_user.id), class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Categories", user_utilities_path(user_id: current_user.id), class:"nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item nav-signout">
-          <%= link_to "Sign Out", destroy_user_session_path, class: "nav-link" %>
-        </li>
-        <div>
+        <div class="col-left">
+          <li class="nav-item">
+            <%= link_to  user_utilities_path(user_id: current_user.id), class: "nav-link" do %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Home", user_utilities_path(user_id: current_user.id), class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Categories", user_utilities_path(user_id: current_user.id), class:"nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link" %>
+          </li>
+        </div>
+        <div class="col-right">
+          <li class="nav-item nav-signout">
+            <%= link_to "Sign Out", destroy_user_session_path, class: "nav-link" %>
+          </li>
           <div class="nav-header">
             <%= image_tag user_avatar(current_user, 100), class:"user-avatar" %>
           </div>

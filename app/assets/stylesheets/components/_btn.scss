@@ -10,6 +10,7 @@
   cursor: pointer;
   outline: none;
   transition: filter 400ms, color 200ms;
+  font-size: var(--font-size-l);
 
   &:hover,
   &:focus,
@@ -26,7 +27,7 @@
     background-image: linear-gradient(to right, var(--color-main), var(--color-main-rotate));
     margin-top: var(--space-m);
     min-width: 70%;
-    padding: var(--space-l) var(--space-xxxl);
+    padding: var(--space-m) var(--space-xxxl);
 
     &:hover,
     &:focus,
@@ -41,6 +42,10 @@
     }
   }
 
+  input[submit] {
+    padding: var(--space-l) var(--space-xxxl);
+  }
+
   &--green {
     color: var(--color-white);
     width: 80%;
@@ -53,6 +58,18 @@
     &:active {
       color: var(--color-white);
       filter: saturate(1.2) brightness(110%);
+    }
+
+    @include media(tabletAndUp) {
+      color: var(--color-dark);
+      border: 2px solid var(--color-second);
+      background-color: var(--color-light);
+      transition: all 0.5s;
+
+      &:hover {
+        background-color: var(--color-second);
+        color: var(--color-light);
+      }
     }
   }
 
