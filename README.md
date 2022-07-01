@@ -47,9 +47,9 @@ To get a local copy up and running follow these simple example steps.
   - create .env file on the root directory
   - replace the following with your credentials from cloudinary 
   ```
-      CLOUD_NAME=dummycloudname
-      API_KEY=dummyapikey
-      API_SECRET=dumyapisecret
+      CLOUD_NAME=yourloudname
+      API_KEY=yourapikey
+      API_SECRET=yourapisecret
   ```
 
     
