@@ -40,10 +40,21 @@ To get a local copy up and running follow these simple example steps.
     - cd utility-app/ 
     - git switch dev
     - run `bin/setup`
-    - run `bin/dev`   
+    - run `bin/dev`
+
+  ## Setting up cloud storage
+   
+  - create .env file on the root directory
+  - replace the following with your credentials from cloudinary 
+  ```
+      CLOUD_NAME=dummycloudname
+      API_KEY=dummyapikey
+      API_SECRET=dumyapisecret
+  ```
+
     
 ## Running the Application Locally
->**Steps to excute the app locally*
+>*Steps to excute the app locally*
   - Run `bin/dev` in the console at working directory
 
 
