@@ -80,16 +80,15 @@
   }
 
   .nav-signout {
-    border: 1px solid rgb(111,1,1);
+    border: 1px solid var(--color-second);
     padding: 3px;
     border-radius: 4px;
 
     .nav-link {
-      border-bottom:none;
-
-      &:hover {
-        color: rgb(111,1,1);
-      }
+      border-bottom:none;      
+    }
+    &:hover {
+      background-color: var(--color-second);
     }
   }
 
