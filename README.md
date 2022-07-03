@@ -59,7 +59,7 @@ To get a local copy up and running follow these simple example steps.
 
 
 >**Deployment on Heroku**
-  > # [Live Demo](https://sheltered-reef-51558.herokuapp.com/)
+  > ### [Live Demo](https://sheltered-reef-51558.herokuapp.com/)
 
 ## Authors
 
