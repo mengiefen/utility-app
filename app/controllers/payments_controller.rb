@@ -2,7 +2,6 @@ class PaymentsController < ApplicationController
   def show
     @utility = Utility.find(params[:utility_id])
     @payment = @utility.payments.find(params[:id])
-    # @payments = Payment.includes(:user, [:utilities], :utility_payments).find(params[:id])
   end
 
   def new

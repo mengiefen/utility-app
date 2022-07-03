@@ -11,7 +11,7 @@
   <h2>Category Type: </h2>
   
    <div class="field checkbox-group">
-      <%= f.collection_check_boxes(:utility_ids, Utility.all, :id, :name,{multiple: true} , class: "form__checkbox") do |b| %>
+      <%= f.collection_check_boxes(:utility_ids, Utility.where(user_id: current_user.id), :id, :name,{multiple: true} , class: "form__checkbox") do |b| %>
           <%= b.label class:"label-checkbox" do%>
           <%= b.check_box + b.text%>
           <%end %>
