@@ -6,13 +6,13 @@
   justify-content: center;
   gap: var(--space-xxxs);
   line-height: 0;
-  padding: 0 var(--space-m);
+  padding: 0 var(--space-m); 
 
-  @include media(tabletAndUp) {
+  @include media(tabletAndUp) {    
     width: 50%;
     gap: var(--space-s);
-    margin-top: var(--space-xxxxl);
-  }
+    margin-top: var(--space-xxxxl);    
+  } 
 
   &__group {
     flex: 1;
@@ -42,8 +42,8 @@
     display: block;
     width: 100%;
     max-width: 100%;
-    padding: var(--space-m) var(--space-xs);
     border: 2px solid var(--color-light);
+    padding: var(--space-m) var(--space-xs);
     background-color: var(--color-white);
     border-bottom: 3px solid var(--color-light);
     outline: none;
@@ -61,6 +61,8 @@
     @include media(tabletAndUp) {
       border: 2px solid var(--text-muted);
       border-radius: var(--border-radius);
+      padding: var(--space-s) var(--space-xs);
+
     }
   }
 
