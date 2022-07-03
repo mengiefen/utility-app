@@ -6,13 +6,14 @@
       <%= link_to home_path do %>
         <i class="fa-solid fa-arrow-left-long back"></i>
       <%end%>
-    </li>
-    <li class="nav-item">LOGIN</li>
-    <li class="nav-item">    
-        <%= f.submit "Log in", class: "btn-header" %>  
-    </li>
-  </ul>
-  
+      </li>
+      <li class="nav-item">LOGIN</li>
+      <li class="nav-item">    
+          <%= f.submit "Log in", class: "btn-header" %>  
+      </li>
+    </ul>
+    <h1 style="align-self: start;margin: 3rem 0 1rem 0;"> Login to PayBill </h1>
+
     <div class="field form__group first">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form__input" %>
@@ -27,7 +28,7 @@
       <%= f.submit "LOG IN", class: "btn btn--blue btn--blue" %>
     </div>
      <div><%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn btn--link" %><br />
-     <div> Don't have account? <%= link_to "Register Here", new_user_registration_path(resource), class: "btn btn--link" %> </div>
+     <div> Don't have account? Click here to  <%= link_to "Register", new_user_registration_path(resource), class: "btn btn--link" %> </div>
     </div>  
 <% end %> 
  

@@ -14,7 +14,7 @@
       </div>
     </li>
   </ul>
-  
+  <h1 style="align-self: start;margin: 3rem 0 1rem 0;"> Register for PayBill </h1>
   <div class="field form__group first">
     <%= f.label :name %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "name" , class:"form__input", placeholder: "Full name"%>
@@ -38,7 +38,7 @@
   <div class="desktop-actions">
     <%= f.submit "SIGN UP", class: "btn btn--blue btn--blue" %>
   </div>
-  <div> Do you have account?
+  <div> Do you have account? Click here to
     <%= link_to "Log in", new_user_session_path, class: "btn btn--link" %>
   </div>
 <% end %>
