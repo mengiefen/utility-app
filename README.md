@@ -7,14 +7,13 @@
 The Utility app is a general purpose resposnsive Ruby on Rails app which enables user to manage different monthly payments. The app keeps track of all the categories of payments and transactions. It allows to save categories of payments with its transactions. The app also keeps track of user's recordes, and also it enables to create category, create new payment transaction and generate a payment transaction detail.
 
 ## App Screenshot
-<div style="background-color:white; padding: 20px; display: flex; align-items: flex-end; justify-content: center; width: 90%; border-radius: 20px;">
-<img src="desktop.gif" style="flex:3; width: 65vw;height: auto;" alt="mobile  screenshot" />
-
-<img src="mobile.gif" style="flex:1; width: 25vw; height: auto;" alt="mobile screenshot" />alt="mobile screenshot" />
+<div style="background-color:white; padding: 10px;  border-radius: 20px;">
+    <img src="desktop.gif" style="width: 60%; height: auto;" alt="mobile  screenshot" />
+    <!--<img src="mobile.gif" style="width: 60%; height: auto;;" alt="mobile screenshot" /> -->
 </div>
 
 ## ERD Diagram 
-![image](erd_diagram.png)
+<img src="erd_diagram.png" style="width: 60%; height: auto;" alt="Entity diagram screenshot" />
 
 
 ## Built with
